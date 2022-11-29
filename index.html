@@ -14,86 +14,78 @@
   <title>Buscador de Usuário no GitHub</title>
 </head>
 
-<body id="app">
+<body>
+  <section id="app">
 
-  <section class="principal">
-    <div class="tema">
-      <h1>devfinder</h1>
-      <div class="changeTheme">
-        <span>DARK</span>
-        <img src="./img/icon-moon.svg" alt="">
+    <section class="principal">
+      <div class="tema">
+        <h1>devfinder</h1>
       </div>
-    </div>
 
-
-
-    <div class="busca">
-      <div class="input-busca">
-        <img src="./img/icon-search.svg" alt="">
-        <input type="text" id="name" name="name" placeholder="Search GitHub username">
-      </div>
-      <input type="button" value="Search" class="botao">
-    </div>
-
-
-
-    <div class="resultado">
-      <div class="img-resultado">
-        <img src="./img/icon-company.svg" alt="">
-      </div>
-      <div class="dados-resultado">
-        <div class="perfil">
-          <span class="nome">The Octocat</span>
-          <span class="arroba">@octacat</span>
-          <span class="dataEntrada">Joined 25 jan 2011</span>
-          <p class="textoPerfil">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat
-            mattis eros.</p>
+      <div class="busca">
+        <div class="input-busca">
+          <img src="./img/icon-search.svg" alt="">
+          <input type="text" id="name" name="name" placeholder="Search GitHub username" v-model="userName">
         </div>
-
-
-        <div class="numeros">
-          <ul class="numeros-lista">
-            <li>
-              <h4 class="titulo-numero">Repos</h4>
-              <span class="resultadoNumero resposResultado">9</span>
-            </li>
-            <li>
-              <h4 class="titulo-numero">Followers</h4>
-              <span class="resultadoNumero followersResultado">9</span>
-            </li>
-            <li>
-              <h4 class="titulo-numero">Following</h4>
-              <span class="resultadoNumero followingResultado">9</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="contato">
-          <ul class="contato-lista">
-            <li>
-              <img src="./img/icon-location.svg" alt="">
-              <span class="cidade">San Francisco</span>
-            </li>
-            <li>
-              <img src="./img/icon-twitter.svg" alt="">
-              <span class="twitter">Not Available</span>
-            </li>
-            <li>
-              <img src="./img/icon-website.svg" alt="">
-              <a class="site">https://github.blog</a>
-            </li>
-            <li>
-              <img src="./img/icon-company.svg" alt="">
-              <span class="empresa">agithub</span>
-            </li>
-          </ul>
-        </div>
-
-
+        <input type="button" value="Search" class="botao" @click="puxarDados">
 
       </div>
-    </div>
+      <p class="erro">Insira um usuário válido</p>
+      <div class=" resultado">
+        <div class="img-resultado">
+          <img class="img_avatar" :src="user.avatar_url" alt="">
+        </div>
+        <div class="dados-resultado">
+          <div class="perfil">
+            <span class="nome">{{user.name}}</span>
+            <span class="arroba">@{{user.login}}</span>
+            <span class="dataEntrada">Joined {{user.created_at}}</span>
+            <p class="textoPerfil">{{user.bio}}</p>
+          </div>
+
+          <div class="numeros">
+            <ul class="numeros-lista">
+              <li>
+                <h4 class="titulo-numero">Repos</h4>
+                <span class="resultadoNumero resposResultado">{{user.public_repos}}</span>
+              </li>
+              <li>
+                <h4 class="titulo-numero">Followers</h4>
+                <span class="resultadoNumero followersResultado">{{user.followers}}</span>
+              </li>
+              <li>
+                <h4 class="titulo-numero">Following</h4>
+                <span class="resultadoNumero followingResultado">{{user.following}}</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="contato">
+            <ul class="contato-lista">
+              <li>
+                <img src="./img/icon-location.svg" alt="">
+                <span class="cidade">{{user.location}}</span>
+              </li>
+              <li>
+                <img src="./img/icon-twitter.svg" alt="">
+                <span class="twitter">{{user.twitter_username}}</span>
+              </li>
+              <li>
+                <img src="./img/icon-website.svg" alt="">
+                <a class="site">{{user.site_admin}}</a>
+              </li>
+              <li>
+                <img src="./img/icon-company.svg" alt="">
+                <span class="empresa">{{user.company}}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </section>
+
   <script src="script.js"></script>
 </body>
 

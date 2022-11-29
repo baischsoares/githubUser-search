@@ -64,7 +64,7 @@ ul{
   list-style: none;
 }
 .principal{
-  max-width:730px ;
+  max-width: 730px ;
 }
 .tema{
   display: flex;
@@ -76,6 +76,7 @@ ul{
   border-radius: 10px;
   padding: 23px 10px 23px 32px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
@@ -85,7 +86,7 @@ ul{
   gap: 20px;
 }
 #name{
-  width: 400px;
+  max-width: 400px;
   border: none;
   height: 40px;
   padding: 10px;
@@ -126,6 +127,11 @@ ul{
   justify-content: flex-end;
   gap: 5px;
 }
+.img_avatar{
+  max-width: 150px;
+  border-radius: 50%;
+}
+
 .arroba{
   grid-column: 1;
 }
@@ -186,4 +192,46 @@ color: #2b3442;
 .contato-lista li span,
 .contato-lista li a{
   color: var(--CorAzul2)  ;
+}
+.erro{
+  color: red;
+  display: none;
+}
+.erro.ativo{
+  display: block;
+}
+
+@media (max-width: 760px){
+  .principal{
+    max-width: 360px;
+  }
+  .busca{
+    justify-content: center;
+    gap: 20px;
+    padding: 5px;
+  }
+  .resultado{
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .numeros-lista{
+    display: inline-block;
+    padding: 20px;
+  }
+  .perfil {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 15px;
+  }
+  .nome{
+    text-align: center;
+  }
+  .dataEntrada{
+    grid-column: 1;
+    grid-row: 3;
+    justify-self: center;
+  }
+  .contato-lista{
+    grid-template-columns: 1fr;
+  }
 }
