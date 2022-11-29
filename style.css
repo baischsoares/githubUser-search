@@ -1,0 +1,189 @@
+:root{
+  --corAzul: #0079FF;
+  --corCinza: #697c9a;
+  --CorAzul2: #4b6a9b;
+  --CorAzulEscuro: #2b3442;
+  --CorBranco: #fff;
+  --CorAzulEscuroDarkTheme: #141d2f;
+  --CorAzulEscuro2DarkTheme: #1e2a47;
+}
+
+.corAzul{
+  color: var(--corAzul);
+}
+.CorAzul2{
+  color: var(--CorAzul2);
+}
+.corCinza{
+  color: var(--corCinza);
+}
+.CorAzulEscuro{
+  color: var(--CorAzulEscuro);
+}
+.CorBranco{
+  color: var(--CorBranco);
+}
+.CorAzulEscuroDarkTheme{
+  color: var(--CorAzulEscuroDarkTheme);
+}
+.CorAzulEscuro2DarkTheme{
+  color: var(--CorAzulEscuro2DarkTheme);
+}
+
+*{
+  font-family: 'Space Mono', monospace;
+}
+body{
+  margin: 0 auto;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Space Mono', monospace;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  background: #F2F2F2
+}
+h1{
+font-weight: 700;
+font-size: 26px;
+}
+h2{
+font-weight: 700;
+font-size: 22px;
+}
+h3{
+font-size: 16px;
+}
+h4{
+font-size: 13px;
+}
+ul{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+.principal{
+  max-width:730px ;
+}
+.tema{
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+}
+.busca{
+  background-color: var(--CorBranco);
+  border-radius: 10px;
+  padding: 23px 10px 23px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.input-busca{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+#name{
+  width: 400px;
+  border: none;
+  height: 40px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+#name::placeholder{
+  color:var(--CorAzul2)
+}
+#name:focus{
+  border: none;
+}
+.botao{
+  color: white;
+  background-color: var(--corAzul);
+  padding: 12px 24px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.botao:hover{
+  background-color: var(--CorAzul2);
+}
+
+.resultado{
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  padding:48px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.perfil{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+}
+.arroba{
+  grid-column: 1;
+}
+.dataEntrada{
+  grid-row: 1;
+  grid-column: 2;
+  justify-self: right;
+}
+.textoPerfil{
+  grid-column: 1/-1
+}
+.nome{
+  font-weight: 700;
+font-size: 26px;
+color: #2B3442;
+}
+.arroba, .dataEntrada, .textoPerfil{
+  font-size: 13px;
+}
+.arroba{
+  color: var(--corAzul);
+}
+.dataEntrada, .textoPerfil{
+  color: #697C9A;
+}
+.numeros{
+  padding: 16px 32px;
+  background-color: #F6F8FF;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+.numeros-lista{
+  display: flex;
+  gap: 100px;
+}
+.titulo-numero{
+  font-weight: 400;
+font-size: 13px;
+color: #4B6A9B;
+margin: 0px;
+
+}
+.resultadoNumero{
+  font-weight: 700;
+font-size: 22px;
+color: #2b3442;
+}
+.contato-lista{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 60px;
+}
+.contato-lista li{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.contato-lista li span,
+.contato-lista li a{
+  color: var(--CorAzul2)  ;
+}
