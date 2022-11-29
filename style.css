@@ -86,7 +86,7 @@ ul{
   gap: 20px;
 }
 #name{
-  max-width: 400px;
+  width: 400px;
   border: none;
   height: 40px;
   padding: 10px;
@@ -204,6 +204,9 @@ color: #2b3442;
 @media (max-width: 760px){
   .principal{
     max-width: 360px;
+  }
+  #name{
+    width: 300px;
   }
   .busca{
     justify-content: center;
